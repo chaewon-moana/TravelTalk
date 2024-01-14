@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		DEDAA7C62B539DF500043F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDAA7C52B539DF500043F83 /* AppDelegate.swift */; };
 		DEDAA7C82B539DF500043F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDAA7C72B539DF500043F83 /* SceneDelegate.swift */; };
-		DEDAA7CA2B539DF500043F83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDAA7C92B539DF500043F83 /* ViewController.swift */; };
 		DEDAA7CD2B539DF500043F83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAA7CB2B539DF500043F83 /* Main.storyboard */; };
 		DEDAA7CF2B539DF600043F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEDAA7CE2B539DF600043F83 /* Assets.xcassets */; };
 		DEDAA7D22B539DF600043F83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAA7D02B539DF600043F83 /* LaunchScreen.storyboard */; };
+		DEDAA7DA2B539E1400043F83 /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDAA7D92B539E1400043F83 /* ChattingData.swift */; };
+		DEDAA7DC2B53A1D900043F83 /* TalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDAA7DB2B53A1D900043F83 /* TalkViewController.swift */; };
+		DEDAA7E42B53A21A00043F83 /* TalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDAA7E22B53A21A00043F83 /* TalkTableViewCell.swift */; };
+		DEDAA7E52B53A21A00043F83 /* TalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEDAA7E32B53A21A00043F83 /* TalkTableViewCell.xib */; };
+		DEDAA7E82B53AB3600043F83 /* TalkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDAA7E72B53AB3600043F83 /* TalkDetailViewController.swift */; };
+		DEDAA7EB2B53B2D200043F83 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDAA7E92B53B2D200043F83 /* UserTableViewCell.swift */; };
+		DEDAA7EC2B53B2D200043F83 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEDAA7EA2B53B2D200043F83 /* UserTableViewCell.xib */; };
+		DEDAA7EF2B53B3AA00043F83 /* PartnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDAA7ED2B53B3AA00043F83 /* PartnerTableViewCell.swift */; };
+		DEDAA7F02B53B3AA00043F83 /* PartnerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEDAA7EE2B53B3AA00043F83 /* PartnerTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DEDAA7C22B539DF500043F83 /* TravelTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDAA7C52B539DF500043F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEDAA7C72B539DF500043F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DEDAA7C92B539DF500043F83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DEDAA7CC2B539DF500043F83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEDAA7CE2B539DF600043F83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEDAA7D12B539DF600043F83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEDAA7D32B539DF600043F83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEDAA7D92B539E1400043F83 /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChattingData.swift; path = "../../../Documents/새싹 강의자료/ChattingData.swift"; sourceTree = "<group>"; };
+		DEDAA7DB2B53A1D900043F83 /* TalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkViewController.swift; sourceTree = "<group>"; };
+		DEDAA7E22B53A21A00043F83 /* TalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkTableViewCell.swift; sourceTree = "<group>"; };
+		DEDAA7E32B53A21A00043F83 /* TalkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkTableViewCell.xib; sourceTree = "<group>"; };
+		DEDAA7E72B53AB3600043F83 /* TalkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkDetailViewController.swift; sourceTree = "<group>"; };
+		DEDAA7E92B53B2D200043F83 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		DEDAA7EA2B53B2D200043F83 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		DEDAA7ED2B53B3AA00043F83 /* PartnerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerTableViewCell.swift; sourceTree = "<group>"; };
+		DEDAA7EE2B53B3AA00043F83 /* PartnerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartnerTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,39 @@
 		DEDAA7C42B539DF500043F83 /* TravelTalk */ = {
 			isa = PBXGroup;
 			children = (
+				DEDAA7E62B53AB2200043F83 /* TalkDetail */,
+				DEDAA7E12B53A1FE00043F83 /* Talk */,
 				DEDAA7C52B539DF500043F83 /* AppDelegate.swift */,
 				DEDAA7C72B539DF500043F83 /* SceneDelegate.swift */,
-				DEDAA7C92B539DF500043F83 /* ViewController.swift */,
 				DEDAA7CB2B539DF500043F83 /* Main.storyboard */,
 				DEDAA7CE2B539DF600043F83 /* Assets.xcassets */,
 				DEDAA7D02B539DF600043F83 /* LaunchScreen.storyboard */,
 				DEDAA7D32B539DF600043F83 /* Info.plist */,
+				DEDAA7D92B539E1400043F83 /* ChattingData.swift */,
 			);
 			path = TravelTalk;
+			sourceTree = "<group>";
+		};
+		DEDAA7E12B53A1FE00043F83 /* Talk */ = {
+			isa = PBXGroup;
+			children = (
+				DEDAA7DB2B53A1D900043F83 /* TalkViewController.swift */,
+				DEDAA7E22B53A21A00043F83 /* TalkTableViewCell.swift */,
+				DEDAA7E32B53A21A00043F83 /* TalkTableViewCell.xib */,
+			);
+			path = Talk;
+			sourceTree = "<group>";
+		};
+		DEDAA7E62B53AB2200043F83 /* TalkDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DEDAA7E72B53AB3600043F83 /* TalkDetailViewController.swift */,
+				DEDAA7E92B53B2D200043F83 /* UserTableViewCell.swift */,
+				DEDAA7EA2B53B2D200043F83 /* UserTableViewCell.xib */,
+				DEDAA7ED2B53B3AA00043F83 /* PartnerTableViewCell.swift */,
+				DEDAA7EE2B53B3AA00043F83 /* PartnerTableViewCell.xib */,
+			);
+			path = TalkDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEDAA7D22B539DF600043F83 /* LaunchScreen.storyboard in Resources */,
+				DEDAA7E52B53A21A00043F83 /* TalkTableViewCell.xib in Resources */,
 				DEDAA7CF2B539DF600043F83 /* Assets.xcassets in Resources */,
 				DEDAA7CD2B539DF500043F83 /* Main.storyboard in Resources */,
+				DEDAA7F02B53B3AA00043F83 /* PartnerTableViewCell.xib in Resources */,
+				DEDAA7EC2B53B2D200043F83 /* UserTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEDAA7CA2B539DF500043F83 /* ViewController.swift in Sources */,
+				DEDAA7DA2B539E1400043F83 /* ChattingData.swift in Sources */,
+				DEDAA7E42B53A21A00043F83 /* TalkTableViewCell.swift in Sources */,
+				DEDAA7EB2B53B2D200043F83 /* UserTableViewCell.swift in Sources */,
+				DEDAA7E82B53AB3600043F83 /* TalkDetailViewController.swift in Sources */,
+				DEDAA7EF2B53B3AA00043F83 /* PartnerTableViewCell.swift in Sources */,
 				DEDAA7C62B539DF500043F83 /* AppDelegate.swift in Sources */,
 				DEDAA7C82B539DF500043F83 /* SceneDelegate.swift in Sources */,
+				DEDAA7DC2B53A1D900043F83 /* TalkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
