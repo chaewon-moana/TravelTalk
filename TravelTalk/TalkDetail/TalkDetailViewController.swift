@@ -43,8 +43,10 @@ class TalkDetailViewController: UIViewController {
         let partnerXIB = UINib(nibName: "PartnerTableViewCell", bundle: nil)
         mainTableView.register(partnerXIB, forCellReuseIdentifier: "PartnerTableViewCell")
         
-        scrollToBottom()
-        
+        //왜 DispatchQueue에 넣으면 마지막 cell이 안짤리고 보임,,왜징,,,?모징,,,?
+        DispatchQueue.main.async {
+            self.scrollToBottom()
+        }
         
     }
 
@@ -102,7 +104,7 @@ extension TalkDetailViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension TalkDetailViewController: UITextFieldDelegate {
     @objc func keyboardWillShow(_ sender: Notification) {
-        self.view.frame.origin.y = -330
+        self.view.frame.origin.y = -290
     }
     
     @objc func keyboardWillHide(_ sender: Notification) {
