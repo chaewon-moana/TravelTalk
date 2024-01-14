@@ -9,7 +9,6 @@ import UIKit
 
 class TalkTableViewCell: UITableViewCell {
 
-    
     @IBOutlet var mainImageView: UIImageView!
     
     @IBOutlet var nameLabel: UILabel!
@@ -19,15 +18,47 @@ class TalkTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        mainImageView.image = UIImage(systemName: "star")
+        DispatchQueue.main.async {
+            self.mainImageView.layer.cornerRadius = self.mainImageView.frame.height/2
+        }
+        mainImageView.backgroundColor = .white
+        mainImageView.contentMode = .scaleAspectFit
+        mainImageView.clipsToBounds = true
+        mainImageView.layer.borderWidth = 1
+        mainImageView.layer.borderColor = UIColor.clear.cgColor
         
-        nameLabel.text = "이름이름"
-        chatLabel.text = "채팅내용입니다."
+       nameLabel.textColor = .black
+       nameLabel.font = .systemFont(ofSize: 14)
         
-        dateLabel.text = "20240101"
+        chatLabel.textColor = .gray
+        chatLabel.font = .systemFont(ofSize: 12)
+  
+        dateLabel.textColor = .gray
         dateLabel.textAlignment = .right
+        dateLabel.font = .systemFont(ofSize: 11)
         
     }
+    
+    func configureCell(data: ChatRoom) {
+        let image = data.chatroomImage[0]
+        mainImageView.image = UIImage(named: image)
+        
+        nameLabel.text = data.chatroomName
+        
+        chatLabel.text = data.chatList.last?.message
+        dateLabel.text = setDate(date: data.chatList.last?.date ?? "", format: "yy.MM.dd")
+    }
 
+    func setDate(date: String, format: String) -> String {
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        
+        let convert = dateFormatter.date(from: date)
+        
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: convert!)
+        
+    }
     
 }
