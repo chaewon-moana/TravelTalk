@@ -10,6 +10,8 @@ import UIKit
 class TalkViewController: UIViewController {
 
     let chatList = mockChatList
+    var reloadList: [ChatRoom] = mockChatList
+    var tmp: Set = Set<String>()
     
     @IBOutlet var userSearchBar: UISearchBar!
     @IBOutlet var mainTableView: UITableView!
@@ -36,14 +38,19 @@ class TalkViewController: UIViewController {
 extension TalkViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mockChatList.count
+        return reloadList.count
+        //return mockChatList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(#function)
         let cell = tableView.dequeueReusableCell(withIdentifier: "TalkTableViewCell", for: indexPath) as! TalkTableViewCell
         
-        let data = mockChatList[indexPath.row]
+        let data = reloadList[indexPath.row]
+        //let data = mockChatList[indexPath.row]
         cell.configureCell(data: data)
+        
+        //mainTableView.reloadData()
         
         return cell
     }
@@ -57,8 +64,10 @@ extension TalkViewController: UITableViewDelegate, UITableViewDataSource {
 
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "TalkDetailViewController") as! TalkDetailViewController
+        print(indexPath.row)
         
-        vc.chatRoomId = indexPath.row //indexPath를 ChatRoom의 index로 처리하게끔 해서 Detail에서 다 처리,,,
+        let id = reloadList[indexPath.row].chatroomId - 1
+        vc.chatRoomId = id //chatroomID를 ChatRoom의 index로 처리하게끔 해서 Detail에서 다 처리,,,
         navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -72,6 +81,26 @@ extension TalkViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        
+        reloadList = []
+        var check: Set<Int> = []
+        
+        for i in 0...mockChatList.count - 1 {
+            let data = mockChatList[i].chatList
+            for j in 0...data.count - 1 {
+                if data[j].user.rawValue.contains(searchText) {
+                    check.insert(i)
+                }
+            }
+        }
+        
+        for i in check {
+            reloadList.append(mockChatList[i])
+        }
+        
+        if searchText == "" {
+            reloadList = mockChatList
+        }
+        mainTableView.reloadData()
     }
 }

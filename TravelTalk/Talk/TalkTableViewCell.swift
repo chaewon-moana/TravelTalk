@@ -27,15 +27,16 @@ class TalkTableViewCell: UITableViewCell {
         mainImageView.layer.borderWidth = 1
         mainImageView.layer.borderColor = UIColor.clear.cgColor
         
-       nameLabel.textColor = .black
-       nameLabel.font = .systemFont(ofSize: 14)
+        nameLabel.textColor = .black
+        nameLabel.font = .systemFont(ofSize: 14)
         
         chatLabel.textColor = .gray
         chatLabel.font = .systemFont(ofSize: 12)
-  
+        
         dateLabel.textColor = .gray
         dateLabel.textAlignment = .right
         dateLabel.font = .systemFont(ofSize: 11)
+        
         
     }
     
