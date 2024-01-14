@@ -38,7 +38,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHu-aB-YjA">
-                        <rect key="frame" x="114" y="36" width="42" height="21"/>
+                        <rect key="frame" x="114" y="36" width="382" height="83"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -54,6 +54,8 @@
                     <constraint firstItem="6Lv-s0-HRc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="j1I-wH-UNc"/>
                     <constraint firstAttribute="trailing" secondItem="6Lv-s0-HRc" secondAttribute="trailing" constant="8" id="jw9-qq-QLx"/>
                     <constraint firstItem="DHu-aB-YjA" firstAttribute="top" secondItem="jE5-Z3-ajz" secondAttribute="bottom" constant="4" id="mMd-uq-Nyj"/>
+                    <constraint firstAttribute="bottom" secondItem="DHu-aB-YjA" secondAttribute="bottom" constant="20" id="pdL-oT-C5W"/>
+                    <constraint firstAttribute="trailing" secondItem="DHu-aB-YjA" secondAttribute="trailing" constant="50" id="zcQ-A5-SZC"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

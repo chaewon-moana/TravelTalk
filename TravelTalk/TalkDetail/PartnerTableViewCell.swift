@@ -20,27 +20,14 @@ class PartnerTableViewCell: UITableViewCell {
         partnerImageView.contentMode = .scaleAspectFit
         partnerImageView.layer.borderWidth = 0.5
         partnerImageView.layer.borderColor = UIColor.black.cgColor
+        partnerNameLabel.font = .boldSystemFont(ofSize: 14)
+        
         DispatchQueue.main.async {
             self.partnerImageView.layer.cornerRadius = self.partnerImageView.frame.height/2
         }
         
         chatView.backgroundColor = .white
-        chatView.clipsToBounds = true
-        chatView.layer.cornerRadius = 8
-        chatView.layer.borderColor = UIColor.black.cgColor
-        chatView.layer.borderWidth = 1
         
-        
-        
-        partnerNameLabel.font = .boldSystemFont(ofSize: 14)
-        
-        chatLabel.sizeToFit()
-        chatLabel.font = .systemFont(ofSize: 14)
-        chatLabel.numberOfLines = 0
-        
-        dateLabel.font = .systemFont(ofSize: 10)
-    }
-
-
-    
+        setChatUI(chatView: chatView, chatLabel: chatLabel, dateLabel: dateLabel)
+    }    
 }

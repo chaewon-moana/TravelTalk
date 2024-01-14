@@ -25,21 +25,20 @@ class TalkViewController: UIViewController {
         mainTableView.delegate = self
         mainTableView.dataSource = self
         userSearchBar.delegate = self
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = .black
         
         setSearchBar()
 
         let xib = UINib(nibName: "TalkTableViewCell", bundle: nil)
         mainTableView.register(xib, forCellReuseIdentifier: "TalkTableViewCell")
-        
     }
-
 }
 
 extension TalkViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reloadList.count
-        //return mockChatList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,11 +46,8 @@ extension TalkViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TalkTableViewCell", for: indexPath) as! TalkTableViewCell
         
         let data = reloadList[indexPath.row]
-        //let data = mockChatList[indexPath.row]
         cell.configureCell(data: data)
-        
-        //mainTableView.reloadData()
-        
+                
         return cell
     }
     
@@ -74,6 +70,7 @@ extension TalkViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
+//너무 비효율적인 것 같은데,,,,,
 extension TalkViewController: UISearchBarDelegate {
     func setSearchBar() {
         userSearchBar.placeholder = "친구 이름을 검색해보세요"
@@ -83,24 +80,35 @@ extension TalkViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         reloadList = []
-        var check: Set<Int> = []
+       // var check: Set<Int> = []
         
-        for i in 0...mockChatList.count - 1 {
-            let data = mockChatList[i].chatList
-            for j in 0...data.count - 1 {
-                if data[j].user.rawValue.contains(searchText) {
-                    check.insert(i)
-                }
-            }
-        }
+//        for i in 0...mockChatList.count - 1 {
+//            let data = mockChatList[i].chatList
+//            for j in 0...data.count - 1 {
+//                if data[j].user.rawValue.contains(searchText) {
+//                    check.insert(i)
+//                }
+//            }
+//        }
         
-        for i in check {
-            reloadList.append(mockChatList[i])
-        }
+//        for list in mockChatList {
+//            if list.chatList.contains(where: {$0.user.rawValue.contains(searchText.lowercased())}) {
+//                reloadList.append(list)
+//            }
+//        }
+        
+        
+//        for i in check {
+//            reloadList.append(mockChatList[i])
+//        }
+        
+        
+        reloadList = mockChatList.filter { $0.chatList.contains { $0.user.rawValue.lowercased().contains(searchText.lowercased()) } }
         
         if searchText == "" {
             reloadList = mockChatList
         }
+
         mainTableView.reloadData()
     }
 }

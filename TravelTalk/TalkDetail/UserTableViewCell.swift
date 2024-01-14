@@ -15,18 +15,10 @@ class UserTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        chatLabel.sizeToFit()
-        chatLabel.font = .systemFont(ofSize: 14)
-        chatLabel.numberOfLines = 0
-        
-        dateLabel.font = .systemFont(ofSize: 10)
-        
-        chatView.backgroundColor = .lightGray
-        chatView.clipsToBounds = true
-        chatView.layer.cornerRadius = 8
-        chatView.layer.borderColor = UIColor.black.cgColor
-        chatView.layer.borderWidth = 1
+
+        setChatUI(chatView: chatView, chatLabel: chatLabel, dateLabel: dateLabel)
+        chatView.backgroundColor = .systemGray5
+
     }
 
   

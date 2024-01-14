@@ -32,6 +32,8 @@ class TalkTableViewCell: UITableViewCell {
         
         chatLabel.textColor = .gray
         chatLabel.font = .systemFont(ofSize: 12)
+        chatLabel.numberOfLines = 1
+        chatLabel.lineBreakMode = .byTruncatingTail
         
         dateLabel.textColor = .gray
         dateLabel.textAlignment = .right

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE99C2012B53DE8700158E02 /* ChatUI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C2002B53DE8700158E02 /* ChatUI+Extension.swift */; };
 		DEDAA7C62B539DF500043F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDAA7C52B539DF500043F83 /* AppDelegate.swift */; };
 		DEDAA7C82B539DF500043F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDAA7C72B539DF500043F83 /* SceneDelegate.swift */; };
 		DEDAA7CD2B539DF500043F83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAA7CB2B539DF500043F83 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE99C2002B53DE8700158E02 /* ChatUI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatUI+Extension.swift"; sourceTree = "<group>"; };
 		DEDAA7C22B539DF500043F83 /* TravelTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDAA7C52B539DF500043F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEDAA7C72B539DF500043F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE99C1FF2B53DE7100158E02 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DE99C2002B53DE8700158E02 /* ChatUI+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		DEDAA7B92B539DF500043F83 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		DEDAA7C42B539DF500043F83 /* TravelTalk */ = {
 			isa = PBXGroup;
 			children = (
+				DE99C1FF2B53DE7100158E02 /* Extension */,
 				DEDAA7E62B53AB2200043F83 /* TalkDetail */,
 				DEDAA7E12B53A1FE00043F83 /* Talk */,
 				DEDAA7C52B539DF500043F83 /* AppDelegate.swift */,
@@ -181,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE99C2012B53DE8700158E02 /* ChatUI+Extension.swift in Sources */,
 				DEDAA7DA2B539E1400043F83 /* ChattingData.swift in Sources */,
 				DEDAA7E42B53A21A00043F83 /* TalkTableViewCell.swift in Sources */,
 				DEDAA7EB2B53B2D200043F83 /* UserTableViewCell.swift in Sources */,
